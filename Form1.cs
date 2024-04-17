@@ -20,6 +20,7 @@ namespace quizGame
         int percentage;
         int totalQuestions;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace quizGame
 
             if (questionNumber == totalQuestions)
             {
-                // Percentage calculations
+                // work out the percentage here
                 percentage = (int)Math.Round((double)(100 * score) / totalQuestions);
 
 
@@ -86,62 +87,49 @@ namespace quizGame
 
                 case 1:
 
-                    lblQuestion.Text = "What is the tallest mountain in the world?";
+                    pictureBox1.Image = Properties.Resources.question;
+                    lblQuestion.Text = "What is the currency of Japan?";
 
-                    button1.Text = "K2";
-                    button2.Text = "Mount Everest";
-                    button3.Text = "Kangchenjunga";
-                    button4.Text = "Lhotse";
+                    button1.Text = "Euro";
+                    button2.Text = "Dollar";
+                    button3.Text = "Yuan";
+                    button4.Text = "Yen";
 
-                    correctAnswer = 2;
+                    correctAnswer = 4;
 
                     break;
                 case 2:
-                    
-                    lblQuestion.Text = "Which of these animals is NOT a mammal?";
+                    pictureBox1.Image = Properties.Resources.question;
+                    lblQuestion.Text = "Which of these is NOT a primary color?";
 
-                    button1.Text = "Penguin";
-                    button2.Text = "Crocodile";
-                    button3.Text = "Bat";
-                    button4.Text = "Dolphin";
+                    button1.Text = "Red";
+                    button2.Text = "Blue";
+                    button3.Text = "Black";
+                    button4.Text = "Yellow";
 
-                    correctAnswer = 2;
+                    correctAnswer = 4;
 
                     break;
 
                 case 3:
 
-                    
+                    pictureBox1.Image = Properties.Resources.question;
 
-                    lblQuestion.Text = " What is the capital of Australia?";
 
-                    button1.Text = "Sydney";
-                    button2.Text = "Melbourne";
-                    button3.Text = "Canberra";
-                    button4.Text = "Perth";
+                    lblQuestion.Text = "What is the scientific name for planet Earth?";
 
-                    correctAnswer = 3;
-
-                    break;
-
-                case 4:
-
-                    
-
-                    lblQuestion.Text = "In the human body, what is the function of the heart?";
-
-                    button1.Text = "To carry oxygen throughout the body";
-                    button2.Text = "To store food";
-                    button3.Text = "To provide structural support";
-                    button4.Text = "To generate brainwaves";
+                    button1.Text = "Terra";
+                    button2.Text = "Mars";
+                    button3.Text = "Sol";
+                    button4.Text = "Luna";
 
                     correctAnswer = 1;
 
                     break;
 
-                case 5:
+                case 4:
 
-                    
+                    pictureBox1.Image = Properties.Resources.question;
 
                     lblQuestion.Text = "What is the Mona Lisa famous painting by Leonardo da Vinci known for?";
 
@@ -154,49 +142,63 @@ namespace quizGame
 
                     break;
 
+                case 5:
+
+                    pictureBox1.Image = Properties.Resources.question;
+
+                    lblQuestion.Text = "In the human body, what is the function of the heart?";
+
+                    button1.Text = "To carry oxygen throughout the body";
+                    button2.Text = "To store food";
+                    button3.Text = "To provide structural support";
+                    button4.Text = "To generate brainwaves";
+
+                    correctAnswer = 1;
+
+                    break;
+
                 case 6:
 
-                   
+                    pictureBox1.Image = Properties.Resources.question;
 
-                    lblQuestion.Text = "Which of these is NOT a primary color?";
+                    lblQuestion.Text = " What is the capital of Australia?";
 
-                    button1.Text = "Red";
-                    button2.Text = "Blue";
-                    button3.Text = "Black";
-                    button4.Text = "Yellow";
+                    button1.Text = "Sydney";
+                    button2.Text = "Melbourne";
+                    button3.Text = "Canberra";
+                    button4.Text = "Perth";
 
-                    correctAnswer = 4;
+                    correctAnswer = 3;
 
                     break;
 
                 case 7:
 
-                    
+                    pictureBox1.Image = Properties.Resources.question;
 
-                    lblQuestion.Text = "What is the currency of Japan?";
+                    lblQuestion.Text = "Which of these animals is NOT a mammal?";
 
-                    button1.Text = "Euro";
-                    button2.Text = "Dollar";
-                    button3.Text = "Yuan";
-                    button4.Text = "Yen";
+                    button1.Text = "Penguin";
+                    button2.Text = "Crocodile";
+                    button3.Text = "Bat";
+                    button4.Text = "Dolphin";
 
-                    correctAnswer = 4;
+                    correctAnswer = 2;
 
                     break;
 
                 case 8:
-                    
-                    
-                  
 
-                    lblQuestion.Text = "What is the scientific name for planet Earth?";
+                    pictureBox1.Image = Properties.Resources.question;
 
-                    button1.Text = "Terra";
-                    button2.Text = "Mars";
-                    button3.Text = "Sol";
-                    button4.Text = "Luna";
+                    lblQuestion.Text = "What is the tallest mountain in the world?";
 
-                    correctAnswer = 1;
+                    button1.Text = "K2";
+                    button2.Text = "Mount Everest";
+                    button3.Text = "Kangchenjunga";
+                    button4.Text = "Lhotse";
+
+                    correctAnswer = 2;
 
                     break;
 
@@ -210,5 +212,9 @@ namespace quizGame
 
         }
 
+        private void checkAnswerEvent(object sender, EventArgs e)
+        {
+
+        }
     }
 }
